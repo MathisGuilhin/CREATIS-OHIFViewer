@@ -43,13 +43,6 @@ class MeasurementTable extends Component {
     selectedKey: null,
   };
 
-  displayMeasurements = () => {
-    console.log('Freehand Data : ', this.props.freehandData);
-    console.log(DICOMTagDescriptions);
-    console.log(DICOMTagDescriptions.tagNumberToString(1048592));
-    console.log(DICOMTagDescriptions.find('x00100010'));
-  };
-
   saveMetadata = () => {
     var patientId;
 
@@ -359,20 +352,17 @@ class MeasurementTable extends Component {
         <ScrollableArea>
           <div>{this.getMeasurementsGroups()}</div>
         </ScrollableArea>
-        <button onClick={this.displayMeasurements} className="button">
-          Display measurements
-        </button>
         <button onClick={this.saveMetadata} className="button">
           Save metadata
         </button>
         <button onClick={this.saveMeasurements} className="button">
           Save measurements
         </button>
-        <button onClick={this.loadMeasurements} className="button">
-          Load measurements
-        </button>
         <button onClick={this.saveDICOMInstance} className="button">
           Save DICOM instance
+        </button>
+        <button onClick={this.loadMeasurements} className="button">
+          Load measurements
         </button>
         <input
           type="file"
