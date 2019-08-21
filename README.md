@@ -11,7 +11,7 @@ L'installation du **viewer OHIF** en version 2 est beaucoup plus simple et rapid
 * Yarn
 
 
-Après avoir fork & clone le  repository [CREATIS-OHIFViewer](https://github.com/MathisGuilhin/CREATIS-OHIFViewer-dev), naviguer dans le dossier root du projet (Viewers). 
+Après avoir fork & clone le  repository [CREATIS-OHIFViewer-dev](https://github.com/MathisGuilhin/CREATIS-OHIFViewer-dev), naviguer dans le dossier root du projet (Viewers). 
 On lance alors le script batch suivant, qui va rétablir les dépendances et lier les sous-modules
 
 ```shell
