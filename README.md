@@ -17,8 +17,10 @@ On lance alors le script batch suivant, qui va rétablir les dépendances et lie
 ```shell
 install
 ```
-L'installation prend environ une demi-heure, le viewer est ensuite disponible à l'adresse http://localhost:5000/
-
+L'installation prend environ une demi-heure, le viewer est ensuite disponible à l'adresse http://localhost:5000/ en rentrant la commande 
+```shell
+yarn start
+```
 ## Ajout de fonctionnalités
 Ce qu'il est nécessaire d'avoir compris avant de continuer, c'est que tout ce qui se trouve en dehors du fichier `/src` de Viewer a un processus de build séparé. Si on veut avoir un impact sur le contenu de ces fichiers librairies/extensions ( [ohif-core](https://github.com/OHIF/ohif-core), [reactviewerbase](https://github.com/OHIF/react-viewerbase), [react-cornerstone-viewport](https://github.com/cornerstonejs/react-cornerstone-viewport), etc..), il faut nécessairement utiliser yalc.
 
@@ -68,6 +70,8 @@ yarn run dev
 ```
 
 ## Sécurisation par authentification 
+#### Prérequis 
+* docker
 
 La [doc OHIF](https://docs.ohif.org/deployment/recipes/user-account-control.html) est complète à ce sujet.
 Complément : il faut re-build à chaque modification pour update la version avec docker. Il est donc mieux de travailler sur la version "normale" et de build à la fin, car le build est (TRES) long.
