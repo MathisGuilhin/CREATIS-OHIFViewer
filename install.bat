@@ -1,36 +1,36 @@
 :: Install project dependencies
-yarn install
+CALL yarn install
 :: Adding yalc
-yarn global add yalc
+CALL yarn global add yalc
 :: Linking submodules
 :: 1/Cornerstone Tools
-cd cornerstoneTools
-yarn install
-yalc publish
-cd ..
-yarn install
-yalc add cornerstone-tools
+CALL cd cornerstoneTools
+CALL yarn install
+CALL yalc publish
+CALL cd ..
+CALL yarn install
+CALL yalc add cornerstone-tools
 :: 2/Ohif-core
-cd ohif-core
-yarn install
-yalc publish
-cd ..
-yarn install
-yalc add ohif-core
+CALL cd ohif-core
+CALL yarn install
+CALL yalc publish
+CALL cd ..
+CALL yarn install
+CALL yalc add ohif-core
 :: 3/React Viewerbase
-cd react-viewerbase
-yarn install
-yalc publish
-cd ..
-yarn install
-yalc add react-viewerbase
+CALL cd react-viewerbase
+CALL yarn install
+CALL yalc publish
+CALL cd ..
+CALL yarn install
+CALL yalc add react-viewerbase
 :: 4/Ohif cornerstone extension
-cd extensions\ohif-cornerstone-extension
-yarn install
-yalc publish
-cd ..\..
-yarn install
-yalc add @ohif/extension-cornerstone
+CALL cd extensions\ohif-cornerstone-extension
+CALL yarn install
+CALL yalc publish
+CALL cd ..\..
+CALL yarn install
+CALL yalc add @ohif/extension-cornerstone
 :: run viewer
-yarn run dev
+CALL yarn run dev
 
