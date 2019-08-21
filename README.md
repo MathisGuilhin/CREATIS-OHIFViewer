@@ -31,7 +31,7 @@ Sinon,
 #Dans le repertoire Viewer par exemple
 yarn global add yalc
 ```
-### Modifications d'un sous modules déjà présent (cornerstoneTools, react-viewerbase, ohif-core)
+### Modifications d'un sous module déjà lié (cornerstoneTools, react-viewerbase, ohif-core)
 Admettons que je souhaite modifier un fichier de ohif-core. Après avoir navigué dans le dossier correspondant, je rentre les commandes suivantes :
 
 ```shell
@@ -42,9 +42,9 @@ puis dans Viewer, j'exécute à nouveau :
 ```shell 
 yarn run dev
 ```
-### Modifications d'un nouveau sous module
+### Modifications d'un nouveau sous module non lié
 
-Admettons que je souhaite modifier un fichier de react-cornerstone-viewport. Après avoir navigué dans le dossier correspondant (que j'ai au préalable fork & clone dans Viewer), je rentre les commandes suivantes :
+Admettons que je souhaite modifier un fichier de react-cornerstone-viewport, qui est déjà utilisé par le viewer, mais qui n'est pas localement sur ma machine. Après avoir navigué dans le dossier correspondant (que j'ai au préalable fork & clone dans Viewer), je rentre les commandes suivantes :
 ```shell
 yarn install 
 yalc publish
@@ -52,10 +52,10 @@ yalc publish
 Je retourne ensuite dans le dossier Viewer et j’exécute : 
 ```shell
 yarn install 
-yalc add ohif-core 
+yalc add react-cornerstone-viewport 
 yarn run dev
 ```
-Dès a présent, yarn start lancera l'application avec ma version locale de ohif-core.
+Dès a présent, yarn start lancera l'application avec ma version locale de react-cornerstone-viewport.
 Cependant, à chaque modification de react-cornerstone-viewport, il faut exécuter (dans le dossier extension/librairie) :
 
 ```shell
