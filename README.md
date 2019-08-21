@@ -1,4 +1,4 @@
-# CREATIS-OHIFViewer
+# CREATIS-OHIFViewer-dev
 OHIF zero-footprint DICOM viewer with segmentation plug-in https://docs.ohif.org/
 
 ﻿# Installation du viewer OHIF et outils de développement 
